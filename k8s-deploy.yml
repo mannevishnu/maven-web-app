@@ -9,16 +9,16 @@ spec:
     type: Recreate
  selector: 
    matchLabels: 
-     app: mavenwebapp1
+     app: mavenwebapp
  template:
   metadata:
    name: mavenwebapppod
    labels:
-     app: mavenwebapp1 
+     app: mavenwebapp 
   spec: 
     containers:
     - name: mavenwebappcontainer
-      image: ashokit/mavenwebapp1
+      image: ashokit/mavenwebapp
       imagePullPolicy: Always
       ports:
       - containerPort: 8080
@@ -30,7 +30,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-   app: mavenwebapp1
+   app: mavenwebapp
   ports:
    - port: 80
      targetPort: 8080
