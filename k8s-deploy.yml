@@ -9,12 +9,12 @@ spec:
     type: Recreate
  selector: 
    matchLabels: 
-     app: mavenwebapp
+     app: mavenwebapp1
  template:
   metadata:
    name: mavenwebapppod
    labels:
-     app: mavenwebapp	 
+     app: mavenwebapp1 
   spec: 
     containers:
     - name: mavenwebappcontainer
@@ -30,7 +30,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-   app: mavenwebapp
+   app: mavenwebapp1
   ports:
    - port: 80
      targetPort: 8080
